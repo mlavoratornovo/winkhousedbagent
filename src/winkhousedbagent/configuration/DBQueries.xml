@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<javolution.util.FastMap>
+<Key class="java.lang.String" value="GOOGLE_DATA_BY_ID"/>
+<Value class="java.lang.String" value="SELECT * FROM GDATA WHERE CODGDATA = ?"/>
+<Key class="java.lang.String" value="GOOGLE_DATA_BY_CODCONTATTO"/>
+<Value class="java.lang.String" value="SELECT * FROM GDATA WHERE CODCONTATTO = ?"/>
+<Key class="java.lang.String" value="GOOGLE_DATA_SAVE"/>
+<Value class="java.lang.String" value="INSERT INTO GDATA (CODCONTATTO,PWSKEY,DESCRIZIONE) VALUES (?,?,?)"/>
+<Key class="java.lang.String" value="GOOGLE_DATA_DELETE"/>
+<Value class="java.lang.String" value="DELETE FROM GDATA WHERE CODCONTATTO = ?"/>
+<Key class="java.lang.String" value="GOOGLE_DATA_UPDATE"/>
+<Value class="java.lang.String" value="UPDATE GDATA SET CODCONTATTO = ?,PWSKEY = ?,DESCRIZIONE = ? WHERE CODGDATA = ?"/>
+<Key class="java.lang.String" value="GOOGLE_DATA_LIST"/>
+<Value class="java.lang.String" value="SELECT * FROM GDATA"/>
+<Key class="java.lang.String" value="GET_WINKSYS_PROPERTY"/>
+<Value class="java.lang.String" value="SELECT * FROM WINKSYS WHERE PROPERTYNAME = ?"/>
+<Key class="java.lang.String" value="GET_WINKSYS_PROPERTIES"/>
+<Value class="java.lang.String" value="SELECT * FROM WINKSYS"/>
+<Key class="java.lang.String" value="INSERT_WINKSYS_PROPERTY"/>
+<Value class="java.lang.String" value="INSERT INTO WINKSYS (PROPERTYNAME,PROPERTYVALUE) VALUES (?,?)"/>
+<Key class="java.lang.String" value="UPDATE_WINKSYS_PROPERTY"/>
+<Value class="java.lang.String" value="UPDATE WINKSYS SET PROPERTYVALUE = ? WHERE PROPERTYNAME = ?"/>
+</javolution.util.FastMap>

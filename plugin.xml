@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="winkhousedbagent.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="console perspective"
+            class="winkhousedbagent.Perspective"
+            id="WinkhouseDBAgent.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="console"
+            allowMultiple="false"
+            icon="icons/Database16.png"
+            class="winkhousedbagent.view.MainView"
+            id="winkhousedbagenti.MainView">
+      </view>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="winkhouseDBAgent.application"
+            name="winkhouseDBAgent">
+         <property
+               name="windowImages"
+               value="icons/Database16.png,icons/Database32.png,icons/Database48.png,icons/Database64.png,icons/Database128.png">
+         </property>
+         <property
+               name="appName"
+               value="winkhouseDBAgent">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,275,445,15">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="org.eclipse.ui.file.exit"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="CTRL+SHIFT+Q">
+      </key>
+   </extension>
+
+</plugin>
